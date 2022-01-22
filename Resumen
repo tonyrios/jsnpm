@@ -1,0 +1,29 @@
+npm install PACKAGE -O <- marcar dependencia como opcional
+npm install PACKAGE --dry-run <- hace el proceso para instalar pero no lo instalar
+npm install PACKAGE -f <- instalación forzosa desde la ultima versión de npm
+npm install PACKAGE@VERSION <- instala versión específica
+
+npm outdate <- ver qué paquetes estan desactualizados
+npm outdate --dd <- lo mismo pero viendo todo lo que sucede para checarlo
+npm update <- actualizar todos los paquetes.
+npm install PACKAGE@latest <- instala última versión del paquete
+npm uninstall PACKAGE <- desinstala el paquete
+npm uninstall PACKAGE --no-save <- desinstala de node_modules pero no del package.json
+
+^ <- significa que solo instala la version + parches y actualizaciones menores son aceptadas
+~ <- solo instala con cambios de versión para parches
+
+-dd <- es la bandera para verbose de npm
+
+nuestros archivos en npode_modules puede ser que no estan actualizados
+se recomienda limpiar cache
+npm cache clean --force
+npm cache verify <- verificar si hay cache.
+
+Auditar paquetes y garantizar seguridad
+
+npm audit
+npm audit --json
+npm update PACKAGE --depth 2 <- actualizar hasta las dependencias
+npm audit fix <- reparar las vulnerabilidades
+snyc.io <- analiza tu proyecto en busca de vulnerabilidades
